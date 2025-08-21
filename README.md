@@ -49,8 +49,10 @@
 
 ## ⚙️ Tech Stack  
 <p align="center">
-   <img src="https://skillicons.dev/icons?i=python,sklearn,streamlit,flask,heroku,git" />
+   <img src="https://skillicons.dev/icons?i=python,sklearn,flask,heroku,git" />
+   <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
 </p>
+
  
 
 - 🐍 **Python 3.x** – Core development  
@@ -137,7 +139,7 @@ streamlit run app.py
 ---
 
 ## 📝 License  
-📄 MIT License © 2025 [Your Name]  
+📄 MIT License © 2025 Mohit Kumar  
 
 ---
 
