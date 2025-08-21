@@ -51,7 +51,7 @@
 <p align="center">
    <img src="https://skillicons.dev/icons?i=python,sklearn,flask,heroku,git" />
    <!-- <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" /> -->
-   <img src="docs/streamlit.png" width="48" height="48" style="border-radius:10px;" />
+   <img src="docs/streamlit.png" width="48" height="48" style="border-radius:50%;" />
 </p>
 
  
