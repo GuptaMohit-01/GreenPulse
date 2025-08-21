@@ -68,7 +68,7 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/GreenPulse.git
+git clone https://github.com/GuptaMohit-01/GreenPulse.git
 cd GreenPulse
 
 # Create a virtual environment
