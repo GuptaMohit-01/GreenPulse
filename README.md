@@ -18,6 +18,7 @@
 ## 📑 Table of Contents
 - [About](#about)
 - [Features](#features)
+- [Demo Preview](#demo-preview)
 - [System Architecture](#system-architecture)
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
@@ -25,8 +26,8 @@
 - [Evaluation](#evaluation)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
-- [Author](#author)
 - [License](#license)
+- [Author](#author)
 
 ---
 
@@ -42,7 +43,11 @@
 - 🤖 **AI Model** – Random Forest Classifier with 95% accuracy  
 - 🎨 **Interactive Dashboard** – Streamlit-powered farmer-friendly UI  
 - 📊 **Evaluation Metrics** – Accuracy score + confusion matrix  
-- 🌍 **Global Vision, Local Touch** – Designed for scalability across regions with farmer-first approach  
+- 🌍 **Global Vision, Local Touch** – Designed for scalability across regions with farmer-first approach
+✅ AI-driven recommendations using ML algorithms  
+✅ User-friendly interface built with **Streamlit**  
+✅ Real-time insights for farmers & agritech startups  
+✅ Scalable architecture for integration with IoT & weather APIs    
 
 ---
 
@@ -98,6 +103,7 @@ pip install -r requirements.txt
 # Train the ML model
 python train_model.py
 
+▶️ Usage
 # Run the app
 streamlit run app.py
 ```
@@ -106,7 +112,34 @@ streamlit run app.py
 
 ---
 
+## 📂 Project Structure
+
+<pre>
+GreenPulse/
+│── app.py                 # Main Streamlit app
+│── model.pkl              # Trained ML model (if saved)
+│── requirements.txt       # Project dependencies
+│── README.md              # Documentation
+│── LICENSE                # License file (MIT)
+│── .gitignore             # Git ignore rules
+
+├── docs/                  # Documentation assets
+│   ├── greenpulse.png     # Logo
+│   ├── architecture.png   # System architecture diagram
+│   └── evaluation.png     # Model evaluation chart
+
+├── data/                  # Dataset (optional)
+│   └── crop_recommendation.csv
+
+└── notebooks/             # Experiments (optional)
+    └── model_training.ipynb
+</pre>
+
+---
+
+
 ## 📊 Evaluation  
+<p>We tested multiple ML models on the Kaggle Crop Recommendation Dataset.</p>
 📌 Model Results:  
 - ✅ Accuracy: **95%**  
 - 📈 Algorithm: **Random Forest Classifier**  
@@ -115,6 +148,19 @@ streamlit run app.py
 <p align="center">
    <img src="docs/evaluation.png" width="65%"/>
 </p>  
+
+---
+
+## 🚀 Roadmap / Future Enhancements
+
+- [x] Crop Recommendation using ML 🌱  
+- [ ] Weather API Integration ⛅  
+- [ ] IoT Sensor Data Support 🌾  
+- [ ] Mobile App Interface 📱  
+- [ ] Multilingual Farmer Support 🌍  
+- [ ] Explainable AI (Model Interpretability) 📊  
+- [ ] Integration with Government Schemes & Subsidy Info 🇮🇳  
+
 
 ---
 
@@ -135,30 +181,31 @@ streamlit run app.py
 - 🌐 **Multilingual Support** → Local language advisory  
 
 ---
+## 🤝 Contributing
+We welcome contributions!  
 
-## 📂 Project Structure  
-```
-├── README.md
-├── data/
-│   └── crop_data.csv
-├── train_model.py
-├── app.py
-├── model.pkl
-├── requirements.txt
-├── evaluation.png
-└── docs/
-    ├── architecture.png
-    ├── banner.png
-    ├── demo1.png
-    └── demo2.png
-```
+- Fork the repo 🍴  
+- Create your feature branch 🌿  
+- Submit a PR 🚀  
+
+Found a bug? Raise an [Issue here](https://github.com/GuptaMohit-01/GreenPulse/issues).
 
 ---
+## 🎯Release Tag
+
+Title: GreenPulse v1.0.0
+Description: Initial stable release with core crop recommendation features.
+
+## 🚀Deployment Badge
+
+[![Streamlit App](https://img.shields.io/badge/Live-Streamlit_Now-green?style=for-the-badge&logo=streamlit)](YOUR_DEPLOYED_URL)
+
 
 ## 📝 License  
 📄 MIT License © 2025 Mohit Kumar  
 
-⚠️👉Permission is hereby granted, free of charge, to any person obtaining a copy
+⚠️👇
+Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction...
 
@@ -170,3 +217,9 @@ in the Software without restriction...
 - 🤝 Tools used: ChatGPT, Cursor AI, Streamlit  
 
 ---
+
+## 👨‍💻 Author
+**Mohit Gupta**  
+- 📧 Email: guptamohitlife01@gmail.com  
+- 🔗 [LinkedIn](https://www.linkedin.com/in/mohit-gupta-0aa866328/)  
+- 🐙 [GitHub](https://github.com/GuptaMohit-01)  
