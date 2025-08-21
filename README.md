@@ -2,7 +2,7 @@
 <h3 align="center">Empowering Farmers with Smart AI Crop Recommendations</h3>
 
 <p align="center">
-  <img src="docs/logo video.mp4" width="400" style="border-radius:50%;" alt="GreenPulse Logo"/>
+  <img src="docs/Gif_logo.gif" width="400" style="border-radius:50%;" alt="GreenPulse Logo"/>
 </p>
   
 
