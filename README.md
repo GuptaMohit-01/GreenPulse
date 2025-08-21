@@ -1,7 +1,7 @@
 # 🌱 GreenPulse – AI-Powered Smart Crop Recommendation System  
 
 <p align="center">
-   <img src="https://img.icons8.com/fluency/96/plant-under-sun.png" width="90" />
+   <img src="https://GreenPulse.png" width="90" />
 </p>  
 
 <p align="center">
