@@ -1,4 +1,5 @@
-# 🌱 GreenPulse – AI-Powered Smart Crop Recommendation System  
+<h1 align="center">🌱 GreenPulse</h1>
+<h3 align="center">Empowering Farmers with Smart AI Crop Recommendations</h3>
 
 <p align="center">
   <img src="docs/GreenPulse.png" width="400" style="border-radius:50%;" alt="GreenPulse Logo"/>
@@ -10,7 +11,22 @@
    <img src="https://img.shields.io/badge/Made%20with-Streamlit-ff4b4b?style=for-the-badge&logo=streamlit" />
    <img src="https://img.shields.io/badge/Deployed%20on-Cloud-blue?style=for-the-badge&logo=heroku" />
    <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=github" />
-</p>  
+</p>
+
+---
+
+## 📑 Table of Contents
+- [About](#about)
+- [Features](#features)
+- [System Architecture](#system-architecture)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Evaluation](#evaluation)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Author](#author)
+- [License](#license)
 
 ---
 
