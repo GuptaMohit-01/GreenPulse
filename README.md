@@ -42,7 +42,7 @@
 
 ## 🏗️ System Architecture  
 <p align="center">
-   <img src="docs/architecture.png" width="75%" />
+   <img src="docs/Sys_Archi.png" width="75%" />
 </p>  
 
 ---
