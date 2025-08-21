@@ -204,7 +204,7 @@ Found a bug? Raise an [Issue here](https://github.com/GuptaMohit-01/GreenPulse/i
 ---
 
 ## 👨‍💻 Author
-**Mohit Gupta**  
+**Mohit Kumar**  
 - 📧 Email: guptamohitlife01@gmail.com  
 - 🔗 [LinkedIn](https://www.linkedin.com/in/mohit-gupta-0aa866328/)  
 - 🐙 [GitHub](https://github.com/GuptaMohit-01)  
