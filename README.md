@@ -1,8 +1,9 @@
 # 🌱 GreenPulse – AI-Powered Smart Crop Recommendation System  
 
 <p align="center">
-   <img src="https://GreenPulse.png" width="90" />
-</p>  
+  <img src="docs/GreenPulse.png" width="400" alt="GreenPulse Logo"/>
+</p>
+  
 
 <p align="center">
    <img src="https://img.shields.io/badge/AI-Crop%20Recommender-green?style=for-the-badge&logo=python" />
