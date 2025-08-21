@@ -50,7 +50,8 @@
 ## ⚙️ Tech Stack  
 <p align="center">
    <img src="https://skillicons.dev/icons?i=python,sklearn,streamlit,flask,heroku,git" />
-</p>  
+</p>
+ 
 
 - 🐍 **Python 3.x** – Core development  
 - 📊 **scikit-learn** – ML model (Random Forest)  
