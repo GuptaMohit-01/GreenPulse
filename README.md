@@ -142,6 +142,10 @@ streamlit run app.py
 ## 📝 License  
 📄 MIT License © 2025 Mohit Kumar  
 
+⚠️👉Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction...
+
 ---
 
 ## 🙏 Acknowledgments  
