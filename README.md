@@ -14,20 +14,22 @@
 </p>
 
 ---
-
 ## 📑 Table of Contents
-- [About](#about)
-- [Features](#features)
-- [Demo Preview](#demo-preview)
-- [System Architecture](#system-architecture)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Evaluation](#evaluation)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Author](#author)
+- [About](#-about-the-project)
+- [Features](#-features)
+- [Demo Preview](#-demo-preview)
+- [System Architecture](#️-system-architecture)
+- [Tech Stack](#️-tech-stack)
+- [Installation](#️-installation--setup)
+- [Usage](#️-installation--setup)   <!-- Usage same section me hai -->
+- [Project Structure](#-project-structure)
+- [Evaluation](#-evaluation)
+- [Roadmap / Future Enhancements](#-roadmap--future-enhancements)
+- [Business Impact](#-business-impact)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Acknowledgments](#-acknowledgments)
+- [Author](#-author)
 
 ---
 
@@ -172,15 +174,6 @@ GreenPulse/
 - 💰 Investor-friendly solution → SaaS-based farmer advisory  
 
 ---
-
-## 🔮 Future Enhancements  
-- 🌦️ **Weather API Integration** → Real-time recommendation  
-- 🧪 **Fertilizer Suggestions** → Soil + Crop-specific  
-- 📱 **Mobile App Version** → Farmer-friendly usage  
-- 🪄 **Explainable AI (SHAP)** → Why a crop was recommended  
-- 🌐 **Multilingual Support** → Local language advisory  
-
----
 ## 🤝 Contributing
 We welcome contributions!  
 
@@ -191,10 +184,6 @@ We welcome contributions!
 Found a bug? Raise an [Issue here](https://github.com/GuptaMohit-01/GreenPulse/issues).
 
 ---
-## 🎯Release Tag
-
-Title: GreenPulse v1.0.0
-Description: Initial stable release with core crop recommendation features.
 
 ## 🚀Deployment Badge
 
@@ -204,10 +193,6 @@ Description: Initial stable release with core crop recommendation features.
 ## 📝 License  
 📄 MIT License © 2025 Mohit Kumar  
 
-⚠️👇
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction...
 
 ---
 
