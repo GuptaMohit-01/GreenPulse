@@ -143,7 +143,7 @@ GreenPulse/
 ## 📊 Evaluation  
 <p>We tested multiple ML models on the Kaggle Crop Recommendation Dataset.</p>
 📌 Model Results:  
-- ✅ Accuracy: **95%**  
+- ✅ Accuracy: **99.55%**  
 - 📈 Algorithm: **Random Forest Classifier**  
 - 📉 Compared with: Decision Tree, SVM  
 
