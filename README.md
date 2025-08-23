@@ -1,4 +1,4 @@
-<h1 align="center">🌱 GreenPulse</h1>
+<h1 align="center">🌱 GreenPulse Ai</h1>
 <h3 align="center">Empowering Farmers with Smart AI Crop Recommendations</h3>
 
 <p align="center">
@@ -34,7 +34,7 @@
 ---
 
 ## 🚀 About the Project  
-🌱 **GreenPulse** is a globally-minded yet locally relevant AI-powered agriculture assistant that recommends the most suitable crops for farmers based on **soil nutrients, rainfall, humidity, and climate conditions**.  
+🌱 **GreenPulse Ai** is a globally-minded yet locally relevant AI-powered agriculture assistant that recommends the most suitable crops for farmers based on **soil nutrients, rainfall, humidity, and climate conditions**.  
 
 > 🌍 *Blending global AI innovation with desi agricultural wisdom to empower farmers with smarter decisions.*  
 
@@ -62,6 +62,43 @@
 🔗 **[👉 Live Demo Here](https://your-deployed-link-here)**  
 
 ---
+## 📸 Screenshots / Feature Preview
+
+Below are some key highlights and features of **GreenPulse**:
+
+<p align="center">
+  <img src="screenshots/homepage1.png" width="45%" alt="Homepage" />
+  <img src="screenshots/homepage2.png" width="45%" alt=" " />
+</p>
+
+<p align="center">
+  <img src="screenshots/recommendation.png" width="45%" alt="Crop Recommendation" />
+  <img src="screenshots/weather.png" width="45%" alt="Weather Integration" />
+</p>
+
+<p align="center">
+  <img src="screenshots/crop_calendar.png" width="45%" alt="Crop Calendar" />
+  <img src="screenshots/market_analysis.png" width="45%" alt="Market Analysis" />
+</p>
+
+<p align="center">
+  <img src="screenshots/crop_disease_detection.png" width="45%" alt="Crop Disease Detection" />
+  <img src="screenshots/analytical_dashboard.png" width="45%" alt="Analytical Dashboard" />
+</p>
+
+<p align="center">
+  <img src="screenshots/trends.png" width="45%" alt="Trends" />
+  <img src="screenshots/government_schemes.png" width="45%" alt="Government Schemes" />
+</p>
+
+<p align="center">
+  <img src="screenshots/gov_sch2.png" width="45%" alt="Government Schemes" />
+  <img src="screenshots/community.png" width="45%" alt="Community" />
+</p>
+
+<p align="center">
+  <img src="screenshots/recent_prediction.png" width="45%" alt="Recent Prediction" />
+</p>
 
 ## 🏗️ System Architecture  
 <p align="center">
