@@ -156,22 +156,19 @@ streamlit run app.py
 
 <pre>
 GreenPulse/
-│── app.py                       # Main application (Streamlit/Python)
+│── app.py                       # Streamlit main app
 │── model.pkl                    # Trained ML model
 │── requirements.txt             # Python dependencies
-│── package.json                  # Node.js/Next.js dependencies
-│── next.config.mjs               # Next.js config
-│── tsconfig.json                 # TypeScript config
-│── README.md                     # Documentation
-│── LICENSE                       # License file (MIT)
-│── .gitignore                    # Git ignore rules
+│── README.md                    # Documentation
+│── LICENSE                      # License file (MIT)
+│── .gitignore                   # Ignore rules
 
-├── docs/                         # Documentation assets
-│   ├── GreenPulse.png            # Logo
-│   ├── Sys_Archi.png             # System architecture diagram
-│   └── evaluation.png            # Model evaluation chart
+├── docs/                        # Documentation assets
+│   ├── GreenPulse.png
+│   ├── Sys_Archi.png
+│   └── evaluation.png
 
-├── screenshots/                  # Feature preview images
+├── screenshots/                 # Feature preview images
 │   ├── homepage1.png
 │   ├── homepage2.png
 │   ├── recommendation.png
@@ -186,13 +183,10 @@ GreenPulse/
 │   ├── community.png
 │   └── recent_prediction.png
 
-├── components/                   # React/Next.js components (if any)
-├── pages/                        # Next.js pages
-├── public/                       # Static assets
-├── styles/                       # CSS/Tailwind/PostCSS files
-├── data/                         # Dataset (optional)
+├── data/                        # Dataset
 │   └── crop_recommendation.csv
-└── notebooks/                    # Experiments (optional)
+
+└── notebooks/                   # ML experiments
     └── model_training.ipynb
 </pre>
 
