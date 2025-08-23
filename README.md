@@ -18,6 +18,7 @@
 - [About](#-about-the-project)
 - [Features](#-features)
 - [Demo Preview](#-demo-preview)
+- [Screenshots Preview](#-features-preview)
 - [System Architecture](#️-system-architecture)
 - [Tech Stack](#️-tech-stack)
 - [Installation](#️-installation--setup)
@@ -155,22 +156,43 @@ streamlit run app.py
 
 <pre>
 GreenPulse/
-│── app.py                 # Main Streamlit app
-│── model.pkl              # Trained ML model (if saved)
-│── requirements.txt       # Project dependencies
-│── README.md              # Documentation
-│── LICENSE                # License file (MIT)
-│── .gitignore             # Git ignore rules
+│── app.py                       # Main application (Streamlit/Python)
+│── model.pkl                    # Trained ML model
+│── requirements.txt             # Python dependencies
+│── package.json                  # Node.js/Next.js dependencies
+│── next.config.mjs               # Next.js config
+│── tsconfig.json                 # TypeScript config
+│── README.md                     # Documentation
+│── LICENSE                       # License file (MIT)
+│── .gitignore                    # Git ignore rules
 
-├── docs/                  # Documentation assets
-│   ├── greenpulse.png     # Logo
-│   ├── architecture.png   # System architecture diagram
-│   └── evaluation.png     # Model evaluation chart
+├── docs/                         # Documentation assets
+│   ├── GreenPulse.png            # Logo
+│   ├── Sys_Archi.png             # System architecture diagram
+│   └── evaluation.png            # Model evaluation chart
 
-├── data/                  # Dataset (optional)
+├── screenshots/                  # Feature preview images
+│   ├── homepage1.png
+│   ├── homepage2.png
+│   ├── recommendation.png
+│   ├── weather.png
+│   ├── crop_calendar.png
+│   ├── market_analysis.png
+│   ├── crop_disease_detection.png
+│   ├── analytical_dashboard.png
+│   ├── trends.png
+│   ├── government_schemes.png
+│   ├── gov_sch2.png
+│   ├── community.png
+│   └── recent_prediction.png
+
+├── components/                   # React/Next.js components (if any)
+├── pages/                        # Next.js pages
+├── public/                       # Static assets
+├── styles/                       # CSS/Tailwind/PostCSS files
+├── data/                         # Dataset (optional)
 │   └── crop_recommendation.csv
-
-└── notebooks/             # Experiments (optional)
+└── notebooks/                    # Experiments (optional)
     └── model_training.ipynb
 </pre>
 
