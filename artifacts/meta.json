@@ -1,0 +1,42 @@
+{
+  "feature_order": [
+    "N",
+    "P",
+    "K",
+    "temperature",
+    "humidity",
+    "ph",
+    "rainfall"
+  ],
+  "train_shape": [
+    1760,
+    7
+  ],
+  "valid_shape": [
+    440,
+    7
+  ],
+  "metrics": {
+    "train": {
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "auc_macro": 1.0,
+      "log_loss": 0.00023726725755648375
+    },
+    "valid": {
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "auc_macro": 1.0,
+      "log_loss": 0.0009215116093369589
+    }
+  },
+  "best_params": {
+    "rf__max_depth": null,
+    "rf__max_features": "sqrt",
+    "rf__min_samples_leaf": 1,
+    "rf__min_samples_split": 2,
+    "rf__n_estimators": 300
+  },
+  "timestamp": "2025-08-23T19:04:53.680295Z",
+  "random_state": 42
+}
