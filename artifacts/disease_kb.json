@@ -1,0 +1,92 @@
+[
+  {
+    "disease": "Powdery Mildew",
+    "symptoms": ["Powdery Mildew", "White patches", "Leaf Curl"],
+    "severity": "moderate",
+    "recommendations": [
+      "Spray sulfur-based fungicide",
+      "Ensure good air circulation",
+      "Avoid overhead irrigation"
+    ]
+  },
+  {
+    "disease": "Late Blight (Potato/Tomato)",
+    "symptoms": ["Blight (Leaf/Stem)", "Fruit Spots", "Stem Lesions"],
+    "severity": "high",
+    "recommendations": [
+      "Destroy infected plants immediately",
+      "Apply copper fungicide",
+      "Rotate crops to avoid recurrence"
+    ]
+  },
+  {
+    "disease": "Bacterial Leaf Spot",
+    "symptoms": ["Leaf Spots", "Bacterial Oozing", "Chlorosis"],
+    "severity": "moderate",
+    "recommendations": [
+      "Use pathogen-free seeds",
+      "Apply copper spray",
+      "Remove crop debris after harvest"
+    ]
+  },
+  {
+    "disease": "Fusarium Wilt",
+    "symptoms": ["Wilting", "Yellowing Leaves", "Stunted Growth", "Root Rot"],
+    "severity": "high",
+    "recommendations": [
+      "Plant resistant crop varieties",
+      "Improve soil drainage",
+      "Use soil solarization before planting"
+    ]
+  },
+  {
+    "disease": "Rust (Cereals/Legumes)",
+    "symptoms": ["Rust Patches", "Early Leaf Drop"],
+    "severity": "moderate",
+    "recommendations": [
+      "Apply systemic fungicide",
+      "Remove alternate host plants",
+      "Use resistant cultivars"
+    ]
+  },
+  {
+    "disease": "Mosaic Virus",
+    "symptoms": ["Mosaic Patterns", "Leaf Curl", "Stunted Growth"],
+    "severity": "high",
+    "recommendations": [
+      "Control aphid/whitefly vectors",
+      "Remove and burn infected plants",
+      "Use virus-free planting material"
+    ]
+  },
+  {
+    "disease": "Anthracnose",
+    "symptoms": ["Fruit Spots", "Stem Lesions", "Leaf Spots"],
+    "severity": "moderate",
+    "recommendations": [
+      "Prune infected parts",
+      "Apply fungicide (chlorothalonil)",
+      "Avoid overhead watering"
+    ]
+  },
+  {
+    "disease": "Downy Mildew",
+    "symptoms": ["Downy Mildew", "Yellowing Leaves", "Early Leaf Drop"],
+    "severity": "high",
+    "recommendations": [
+      "Improve ventilation",
+      "Apply phosphonate fungicide",
+      "Destroy infected crop residues"
+    ]
+  },
+  {
+    "disease": "Sooty Mold",
+    "symptoms": ["Sooty Mold", "Sticky sap", "Chlorosis"],
+    "severity": "low",
+    "recommendations": [
+      "Control sap-sucking insects (aphids, whiteflies)",
+      "Wash leaves with mild soap solution",
+      "Prune heavily infested branches"
+    ]
+  }
+]

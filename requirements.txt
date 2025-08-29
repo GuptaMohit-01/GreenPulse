@@ -1,7 +1,7 @@
 
 ---
 
-# 📦 2. **requirements.txt**
+# 📦 **requirements.txt**
 ```txt
 streamlit
 scikit-learn

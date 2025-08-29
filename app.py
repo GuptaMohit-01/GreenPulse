@@ -11,6 +11,15 @@ from io import BytesIO
 import requests
 import os
 import datetime
+from diagnose_by_symptoms import diagnose_by_symptoms
+import json
+import datetime
+
+# Load disease knowledge base
+with open("artifacts/disease_kb.json", "r", encoding="utf-8") as f:
+    disease_info = json.load(f)
+
+
 try:
     import shap
     HAS_SHAP = True
@@ -412,7 +421,7 @@ with col1:
 
     # ---- Batch CSV upload / bulk predictions ----
     st.markdown("<div class='card'>", unsafe_allow_html=True)
-    st.subheader("Batch predictions (CSV)")
+    st.subheader("Batch Predictions (CSV)")
     st.write("Upload CSV with columns matching UI names or model expected names. Mapping will be applied.")
     uploaded = st.file_uploader("Upload CSV for batch predict", type=["csv"], key="batch_csv")
     if uploaded is not None:
@@ -616,75 +625,116 @@ if recommend:
         st.markdown("</div>", unsafe_allow_html=True)
 
     # --- Disease diagnosis & protection recommendations ---
-    with st.expander("🩺 Disease Diagnosis & Protection", expanded=False):
-        st.markdown("Use visible symptoms to get likely disease(s) and practical protection steps.")
-        # default crop selection: prefer top predicted crop otherwise allow manual
-        default_crop = top['crop'] if (results and len(results) > 0) else (label_classes[0] if label_classes else "")
-        crop_choice = st.selectbox("Crop (select target crop)", options=[default_crop] + ([c for c in (label_classes or []) if c != default_crop][:20]), index=0)
-        st.markdown("Select observed symptoms (or type custom ones).")
-        selected_symptoms = st.multiselect("Symptoms (choose)", options=_symptom_options, default=None, key="disease_symptoms")
-        custom_sym = st.text_input("Add custom symptom (comma-separated)", value="", placeholder="e.g. yellowing of veins, sticky sap")
-        if custom_sym:
-            # split and append
-            more = [s.strip() for s in custom_sym.split(",") if s.strip()]
-            for m in more:
-                if m and m not in selected_symptoms:
-                    selected_symptoms.append(m)
+with st.expander("🩺 Disease Diagnosis & Protection", expanded=False):
+    st.markdown("Use visible symptoms to get likely disease(s) and practical protection steps.")
 
-        # optional image upload for future image-model prediction (not required)
-        st.markdown("Optional: upload leaf image (if you have an image model in artifacts).")
-        img_file = st.file_uploader("Leaf image (optional)", type=["png","jpg","jpeg"], key="disease_image")
+    # default crop selection: prefer top predicted crop otherwise allow manual
+    # Safely get default crop (use crop recommendation output if available)
+try:
+    if "results" in locals() and results and len(results) > 0:
+        default_crop = top.get("crop", "rice")
+    elif "label_classes" in locals() and label_classes:
+        default_crop = label_classes[0]
+    else:
+        default_crop = "rice"  # fallback default crop
+except Exception:
+    default_crop = "rice"
 
-        if st.button("Diagnose Disease"):
-            if not selected_symptoms and not img_file:
-                st.warning("Provide at least one symptom or an image.")
+    crop_options = [default_crop] + ([c for c in (label_classes or []) if c != default_crop][:20])
+    crop_choice = st.selectbox("Crop (select target crop)", options=crop_options, index=0)
+
+    st.markdown("Select observed symptoms (or type custom ones).")
+
+    # Symptoms selector (single, correctly placed call)
+    selected_symptoms = st.multiselect(
+        "Symptoms (choose)",
+        options=SYMPTOM_OPTIONS,
+        default=[],
+        key="disease_symptoms"
+    )
+
+    # allow custom symptoms (comma-separated)
+    custom_sym = st.text_input(
+        "Add custom symptom (comma-separated)",
+        value="",
+        placeholder="e.g. yellowing of veins, sticky sap"
+    )
+    if custom_sym:
+        more = [s.strip() for s in custom_sym.split(",") if s.strip()]
+        for m in more:
+            if m and m not in selected_symptoms:
+                selected_symptoms.append(m)
+
+    # optional image upload for future image-model prediction (not required)
+    st.markdown("Optional: upload leaf image (if you have an image model in artifacts).")
+    img_file = st.file_uploader("Leaf image (optional)", type=["png", "jpg", "jpeg"], key="disease_image")
+
+    # Diagnose button (keeps logic non-fatal if image model or KB missing)
+    if st.button("Diagnose Disease"):
+        if not selected_symptoms and not img_file:
+            st.warning("Provide at least one symptom or an image.")
+        else:
+            # 1) image-based placeholder (if you have a model assigned to disease_model)
+            image_based = None
+            if disease_model is not None and img_file is not None:
+                try:
+                    # placeholder: implement your actual image preprocessing + model.predict here
+                    # e.g., image = load_image(img_file); pred = disease_model.predict(image)
+                    image_based = None
+                except Exception:
+                    image_based = None
+
+            # 2) symptom-based rule matching (requires diagnose_by_symptoms function and disease_info KB)
+            matches = []
+            if disease_info is not None:
+                try:
+                    matches = diagnose_by_symptoms(selected_symptoms, crop_choice, disease_info, top_n=3)
+                except Exception as e:
+                    st.error(f"Diagnosis engine error: {e}")
+                    matches = []
             else:
-                # 1) if image model present, attempt image-based prediction (best-effort)
-                image_based = None
-                if disease_model and img_file:
-                    try:
-                        # best-effort: if model expects preprocessed features this will fail; keep non-fatal
-                        # here we do NOT implement heavy image preprocessing; leave as placeholder
-                        image_based = None
-                    except Exception:
-                        image_based = None
+                # no KB available
+                matches = []
 
-                # 2) symptom-based rule matching
-                matches = diagnose_by_symptoms(selected_symptoms, crop_choice, disease_info, top_n=3)
-                if not matches and not image_based:
-                    st.info("No likely diseases found from symptoms. Consider expanding symptom list or consult an expert.")
+            # Present results
+            if not matches and not image_based:
+                st.info("No likely diseases found from symptoms. Consider expanding symptom list or consult an expert.")
+            else:
+                if image_based and not matches:
+                    st.markdown("**Image-based prediction** (model output)")
+                    st.write(image_based)
                 else:
-                    if image_based and not matches:
-                        st.markdown("**Image-based prediction** (model output)")
-                        st.write(image_based)
-                    else:
-                        st.markdown("**Likely diseases (ranked)**")
-                        for m in matches:
-                            e = m["entry"]
-                            sc = m["score"]
-                            st.markdown(f"- **{e['disease']}** (score: {sc:.2f}) — severity: {e.get('severity', 'unknown')}")
+                    st.markdown("**Likely diseases (ranked)**")
+                    for m in matches:
+                        e = m["entry"]
+                        sc = m["score"]
+                        st.markdown(f"- **{e['disease']}** (score: {sc:.2f}) — severity: {e.get('severity', 'unknown')}")
+                        if e.get("recommendations"):
                             st.markdown("  Recommendations:")
                             for rec in e.get("recommendations", []):
                                 st.markdown(f"  - {rec}")
-                            st.markdown("")  # spacing
+                        st.markdown("")  # spacing
 
-                    # allow download of short recommendations
-                    try:
-                        # prepare plain text recommendations
-                        txt_lines = []
-                        txt_lines.append(f"GreenPulse - Disease Diagnosis Report\nCrop: {crop_choice}\nDate: {datetime.datetime.utcnow().isoformat()}Z\n")
-                        txt_lines.append("Observed symptoms: " + ", ".join(selected_symptoms))
-                        txt_lines.append("\nTop matches:\n")
-                        for m in matches:
-                            e = m["entry"]
-                            txt_lines.append(f"- {e['disease']} (score: {m['score']:.2f}, severity: {e.get('severity', 'unknown')})")
-                            txt_lines.append("  Recommendations:")
-                            for rec in e.get("recommendations", []):
-                                txt_lines.append(f"    * {rec}")
-                            txt_lines.append("")
-                        txt_bytes = ("\n".join(txt_lines)).encode("utf-8")
-                        st.download_button("📥 Download diagnosis (txt)", data=txt_bytes, file_name="disease_diagnosis.txt", mime="text/plain")
-                    except Exception:
-                        st.warning("Download unavailable.")
+                # allow download of short recommendations
+                try:
+                    txt_lines = []
+                    txt_lines.append("GreenPulse - Disease Diagnosis Report")
+                    txt_lines.append(f"Crop: {crop_choice}")
+                    txt_lines.append(f"Date: {datetime.datetime.utcnow().isoformat()}Z")
+                    txt_lines.append("")
+                    txt_lines.append("Observed symptoms: " + (", ".join(selected_symptoms) if selected_symptoms else "None"))
+                    txt_lines.append("\nTop matches:\n")
+                    for m in matches:
+                        e = m["entry"]
+                        txt_lines.append(f"- {e['disease']} (score: {m['score']:.2f}, severity: {e.get('severity','unknown')})")
+                        txt_lines.append("  Recommendations:")
+                        for rec in e.get("recommendations", []):
+                            txt_lines.append(f"    * {rec}")
+                        txt_lines.append("")
+                    txt_bytes = ("\n".join(txt_lines)).encode("utf-8")
+                    st.download_button("📥 Download diagnosis (txt)", data=txt_bytes, file_name="disease_diagnosis.txt", mime="text/plain")
+                except Exception as e:
+                    st.warning(f"Download unavailable: {e}")
+
     # ...existing code: continue logs, PDF, footer ...
 # ...existing code...
