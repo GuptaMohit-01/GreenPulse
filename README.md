@@ -43,7 +43,7 @@
 
 ## ✨ Features  
 - 🌾 **Smart Crop Prediction** – Based on soil (N, P, K), pH, climate & rainfall  
-- 🤖 **AI Model** – Random Forest Classifier with 95% accuracy  
+- 🤖 **AI Model** – Random Forest Classifier with 98% accuracy  
 - 🎨 **Interactive Dashboard** – Streamlit-powered farmer-friendly UI  
 - 📊 **Evaluation Metrics** – Accuracy score + confusion matrix  
 - 🌍 **Global Vision, Local Touch** – Designed for scalability across regions with farmer-first approach
