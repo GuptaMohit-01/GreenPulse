@@ -57,10 +57,11 @@
 ## 🎥 Demo Preview  
 <p align="center">
    <img src="docs/demo1.png" width="45%"/> 
-   <img src="docs/demo2.png" width="45%"/>
+   <!-- <img src="docs/demo2.png" width="45%"/> -->
 </p>  
 
-🔗 **[👉 Live Demo Here](https://your-deployed-link-here)**  
+🔗 **[👉 Live Demo Here](http://localhost:8501)**
+🔗 **[👉 Live Demo Vercel Web](https://greenpulse-ai.vercel.app/)**
 
 ---
 ## 📸 Screenshots / Feature Preview
